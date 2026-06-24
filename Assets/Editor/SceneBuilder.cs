@@ -691,7 +691,8 @@ public static class SceneBuilder
 
     static void SetAnchors(GameObject go, Vector2 anchorMin, Vector2 anchorMax)
     {
-        var rt = go.GetComponent<RectTransform>() ?? go.AddComponent<RectTransform>();
+        var rt = go.GetComponent<RectTransform>();
+        if (rt == null) rt = go.AddComponent<RectTransform>();
         rt.anchorMin = anchorMin;
         rt.anchorMax = anchorMax;
         rt.offsetMin = rt.offsetMax = Vector2.zero;
