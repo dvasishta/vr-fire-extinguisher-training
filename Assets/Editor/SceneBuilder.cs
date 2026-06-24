@@ -638,8 +638,8 @@ public static class SceneBuilder
         startRT.anchorMin = new Vector2(0.55f, 0.05f);
         startRT.anchorMax = new Vector2(0.75f, 0.2f);
         startRT.offsetMin = startRT.offsetMax = Vector2.zero;
-        startBtn.SetActive(false);
-        panel.startButton = startBtn.GetComponent<Button>();
+        startBtn.gameObject.SetActive(false);
+        panel.startButton = startBtn;
     }
 
     // ─────────────────────────────────────────────────────────────────────────
